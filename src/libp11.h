@@ -409,6 +409,9 @@ int PKCS11_pkey_meths(ENGINE *e, EVP_PKEY_METHOD **pmeth,
  */
 extern void ERR_load_PKCS11_strings(void);
 
+/* Unload PKCS11 error strings */
+extern void ERR_unload_PKCS11_strings(void);
+
 #if defined(_LIBP11_INT_H)
 	/* Deprecated functions will no longer be exported in libp11 0.5.0 */
 	/* They are, however, used internally in OpenSSL method definitions */

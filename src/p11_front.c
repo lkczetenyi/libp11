@@ -272,6 +272,12 @@ void ERR_load_PKCS11_strings(void)
 	ERR_load_CKR_strings();
 }
 
+void ERR_unload_PKCS11_strings(void)
+{
+	ERR_unload_P11_strings();
+ 	ERR_unload_CKR_strings();
+}
+
 int PKCS11_set_ui_method(PKCS11_CTX *ctx, UI_METHOD *ui_method, void *ui_user_data)
 {
 	if (check_fork(ctx) < 0)
